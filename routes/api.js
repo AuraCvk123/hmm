@@ -6,12 +6,12 @@ var db = require(__path + '/database/db');
 try {
 var kuhong = db.get('ojan'); // jan diubah
 } catch (e) {
-	console.log('WELCOME TO ojan API!') // boleh diubah
+	console.log('WELCOME TO Rinka API!') // boleh diubah
 }
 
-var creatorList = ['ojan']; // Nama Lu Ngab
+var creatorList = ['rinka']; // Nama Lu Ngab
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)]; // Ini jan diubah
-var key = 'OjanKeY' // Apikey Lu Ngab
+var key = 'RinkaChan' // Apikey Lu Ngab
 
 // Required Modules :
 var ffmpeg = require('fluent-ffmpeg');
