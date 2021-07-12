@@ -1,683 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rinka Api</title>
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-</head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
-
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Connect Plus</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-xl-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search products">
               </div>
-            </div>
-          </form>
-        </div>
-      </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="https://telegra.ph/file/f31ea2254be4e1627e541.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Rinka
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Follow ig gw @lolichan364</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item  dropdown d-none d-md-block">
+              <a class="nav-link dropdown-toggle" id="reportDropdown" href="#" data-toggle="dropdown" aria-expanded="false"> Reports </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="reportDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-file-pdf mr-2"></i>PDF </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-file-excel mr-2"></i>Excel </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-file-word mr-2"></i>doc </a>
               </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="https://telegra.ph/file/f31ea2254be4e1627e541.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Rinka
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Jangan lupa solat</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </li>
+            <li class="nav-item  dropdown d-none d-md-block">
+              <a class="nav-link dropdown-toggle" id="projectDropdown" href="#" data-toggle="dropdown" aria-expanded="false"> Projects </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="projectDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-eye-outline mr-2"></i>View Project </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-pencil-outline mr-2"></i>Edit Project </a>
               </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="https://telegra.ph/file/f31ea2254be4e1627e541.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Rinka
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Jangan lupa makan</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </li>
+            <li class="nav-item nav-language dropdown d-none d-md-block">
+              <a class="nav-link dropdown-toggle" id="languageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-language-icon">
+                  <i class="flag-icon flag-icon-us" title="us" id="us"></i>
+                </div>
+                <div class="nav-language-text">
+                  <p class="mb-1 text-black">English</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+                <a class="dropdown-item" href="#">
+                  <div class="nav-language-icon mr-2">
+                    <i class="flag-icon flag-icon-ae" title="ae" id="ae"></i>
+                  </div>
+                  <div class="nav-language-text">
+                    <p class="mb-1 text-black">Arabic</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <div class="nav-language-icon mr-2">
+                    <i class="flag-icon flag-icon-gb" title="GB" id="gb"></i>
+                  </div>
+                  <div class="nav-language-text">
+                    <p class="mb-1 text-black">English</p>
+                  </div>
+                </a>
               </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+            </li>
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="assets/images/faces/face28.png" alt="image">
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">Henry Klein</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="profileDropdown" data-x-placement="bottom-end">
+                <div class="p-3 text-center bg-primary">
+                  <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/images/faces/face28.png" alt="">
+                </div>
+                <div class="p-2">
+                  <h5 class="dropdown-header text-uppercase pl-2 text-dark">User Options</h5>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Inbox</span>
+                    <span class="p-0">
+                      <span class="badge badge-primary">3</span>
+                      <i class="mdi mdi-email-open-outline ml-1"></i>
+                    </span>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Profile</span>
+                    <span class="p-0">
+                      <span class="badge badge-success">1</span>
+                      <i class="mdi mdi-account-outline ml-1"></i>
+                    </span>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                    <span>Settings</span>
+                    <i class="mdi mdi-settings"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <h5 class="dropdown-header text-uppercase  pl-2 text-dark mt-2">Actions</h5>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Lock Account</span>
+                    <i class="mdi mdi-lock ml-1"></i>
+                  </a>
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="#">
+                    <span>Log Out</span>
+                    <i class="mdi mdi-logout ml-1"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-email-outline"></i>
+                <span class="count-symbol bg-success"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <h6 class="p-3 mb-0 bg-primary text-white py-4">Messages</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                    <p class="text-gray mb-0"> 1 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                    <p class="text-gray mb-0"> 15 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face3.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                    <p class="text-gray mb-0"> 18 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count-symbol bg-danger"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0 bg-primary text-white py-4">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-calendar"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                    <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-settings"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                    <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-link-variant"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                    <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
         </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">1</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> Change Template
-            <span class="float-right text-muted text-sm">17-6-2021</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Rinka Api</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="https://telegra.ph/file/f31ea2254be4e1627e541.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Rinka</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-            <span class="nav-link">Navigation</span>
-            </a>
-          </li>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-              <span class="menu-icon">
-              <i class="nav-icon fas fa-tachometer"></i>
-              </span>
-                 Dashboard
-     	  </a>              
-          </li>
-            <span class="nav-link">Features</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-downloader" aria-expanded="false" aria-controls="ui-downloader">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-download"></i>
-          </span>
-          <span class="menu-title">Downloader API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-downloader">
-          <ul class="nav flex-column sub-menu">
-         <li class="nav-item"> <a class="nav-link"href="api/yutub/audio?url=URL&apikey=APIKEY">YouTube Audio Downloader</a></li>
-         <li class="nav-item"> <a class="nav-link"href="api/yutub/video?url=URL&apikey=APIKEY">YouTube Video Downloader</a></li>
-         <li class="nav-item"> <a class="nav-link"href="api/instagram?apikey=APIKEY&url=URL">Instagram Downloader</a></li>
-         <li class="nav-item"> <a class="nav-link"href="api/tiktod/?url=URL&apikey=APIKEY">Tiktok Downloader</a></li>
-         <li class="nav-item"> <a class="nav-link"href="api/yutub/?video=ojan&apikey=APIKEY">YouTube </a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-islamic" aria-expanded="false" aria-controls="ui-islamic">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-moon"></i>
-          </span>
-          <span class="menu-title">Islamic API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-islamic">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link"href="api/hadits?kitab=bukhari&nomor=52&apikey=APIKEY">Hadits Shahih</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/quran?surah=1&ayat=2&apikey=APIKEY">Al Qur'an</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/tahlil?apikey=APIKEY">Doa Tahlil</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/wirid?apikey=APIKEY">Doa Wirid</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/asmaulhusna?apikey=APIKEY">Asmaul Husna</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/doaharian?apikey=APIKEY">Doa Harian</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/ayatkursi?apikey=APIKEY">Ayat Kursi</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/kisahnabi?nabi=muhammad&apikey=APIKEY">Kisah Nabi</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/niatshalat?apikey=APIKEY">Niat Shalat</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/muslim/bacaanshalat?apikey=APIKEY">Bacaan Shalat</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/jadwalshalat?kota=jakarta&apikey=APIKEY">Jadwal Shalat</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-stalker" aria-expanded="false" aria-controls="ui-stalker">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-low-vision"></i>
-          </span>
-          <span class="menu-title">Stalker API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-stalker">
-          <ul class="nav flex-column sub-menu">
-          
-          <li class="nav-item"> <a class="nav-link"href="api/tiktod/stalk/?username=ojan&apikey=APIKEY">Tiktok Stalk</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/ig/stalk?username=fauzan_perfect&apikey=APIKEY">Instagram Stalk</a></li>
-          <li class="nav-item"> <a class="nav-link"href="api/iguser?nama=fauzan_perfect&apikey=APIKEY">All User Ig</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-img-maker" aria-expanded="false" aria-controls="ui-img-maker">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-image"></i>
-          </span>
-          <span class="menu-title">Image Maker API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-img-maker">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="api/quotemaker?quote=Ikan hiu makan tomat&author=Mang Oleh&theme=random&apikey=APIKEY">Quote Maker</a></li>
-          <li class="nav-item"> <a class="nav-link" href="https://sertiojanganzapi.nasihosting.com/serti/serti1/img.php?nama=TEXT">Serti FF</a></li>
-          <li class="nav-item"> <a class="nav-link" href="https://sertiojanganzapi.nasihosting.com/serti/serti2/img.php?nama=TEXT">Serti FF 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="https://sertiojanganzapi.nasihosting.com/serti/serti3/img.php?nama=KONTOL">Serti FF 3</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker2?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker4?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 4</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3d?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3D</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3d/no2?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3D 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3d/no3?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3D 3</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3d/no4?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3D 4</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/maker3d/no5?text=ojanganteng&apikey=YOUR_APIKEY">Pemandangan 3D 5</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/googleimage?q=anjing&apikey=YOUR_APIKEY">Google Image</a></li>    
-          <li class="nav-item"> <a class="nav-link" href="api/wallpaper/teknologi?apikey=YOUR_APIKEY">Wallpaper Teknologi</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/wallpaper/programming?apikey=YOUR_APIKEY">Wallpaper Programming</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/wallpaper/cyberspace?apikey=YOUR_APIKEY">Wallpaper CyberSpace</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/wallpaper/muslim?apikey=YOUR_APIKEY">Wallpaper Muslim</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/wallpaper/pegunungan?apikey=YOUR_APIKEY">Wallpaper Mountain View</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-photooxy" aria-expanded="false" aria-controls="ui-photooxy">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-camera"></i>
-          </span>
-          <span class="menu-title">Photooxy API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-photooxy">
-          <ul class="nav flex-column sub-menu">
-         
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker?text=halo&text2=hai&theme=glitch&apikey=YOUR_APIKEY">Glitch</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker?text=halo&text2=hai&text3=gw&theme=google-suggestion&apikey=YOUR_APIKEY">Google Suggestion</a>
-         <li class="nav-item"> <a class="nav-link" href="api/neon?apikey=YOUR_APIKEY&text=Anjayy">Dark Neon</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=YOUR_APIKEY">PUBG</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/game?text=halo&text2=hai&theme=battlefield&apikey=YOUR_APIKEY">BattleField</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/senja?text=ojan&theme=coffee-cup&apikey=YOUR_APIKEY">Coffee Cup</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/senja?text=ojan&theme=coffee-cup2&apikey=YOUR_APIKEY">Coffee Cup 2</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/metallic?text=ojan&theme=neon&apikey=YOUR_APIKEY">Neon</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/metallic?text=ojan&theme=glow&apikey=YOUR_APIKEY">Glow</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/alam?text=ojan&theme=summer&apikey=YOUR_APIKEY">Summer</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/alam?text=ojan&theme=flower&apikey=YOUR_APIKEY">Flower</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/random?text=ojan&theme=text-burn&apikey=YOUR_APIKEY">Text Burn</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/random?text=ojan&theme=art-quote&apikey=YOUR_APIKEY">Art Quote</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/roses?text=ojan&theme=wooden-boarch&apikey=YOUR_APIKEY">Wooden Boarch</a>
-         <li class="nav-item"> <a class="nav-link" href="api/textmaker/roses?text=ojan&theme=golden&apikey=YOUR_APIKEY">Golden Roses</a>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-textpro" aria-expanded="false" aria-controls="ui-textpro">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-lock"></i>
-          </span>
-          <span class="menu-title">Encrypt API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-textpro">
-          <ul class="nav flex-column sub-menu">
-          
-          <li class="nav-item"> <a class="nav-link" href="api/tomedia?apikey=YOUR_APIKEY&img=Masukan_Teks_Base64">Base64 To Media</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/binary?apikey=YOUR_APIKEY&encode=ojan">Binary Encode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/binary?apikey=YOUR_APIKEY&decode=encodenya">Binary Decode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/base?apikey=YOUR_APIKEY&type=base64&encode=ojanKece">Base64 Encode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/base?apikey=YOUR_APIKEY&type=base64&decode=encodenya=">Base64 Decode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/base?apikey=YOUR_APIKEY&type=base32&encode=ojanKece">Base32 Encode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/base?apikey=YOUR_APIKEY&type=base32&decode=encode nya=">Base32 Decode</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/md5?apikey=YOUR_APIKEY&text=ojanKece">MD5</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/createcode?text=KodePolisi09&apikey=YOUR_APIKEY">Code Generator</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/dork?apikey=YOUR_APIKEY&dork=php.id">pencarian dork</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/pastebin?apikey=YOUR_APIKEY&text=ojan">pastebin</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-fun" aria-expanded="false" aria-controls="ui-fun">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-smile"></i>
-          </span>
-          <span class="menu-title">Fun API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-fun">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="/api/simsimi?kata=halo&apikey=APIKEY">Simsimi</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/comik?=one pucman&apikey=APIKEY">comik</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/alay?kata=ajgkau&apikey=APIKEY">Alay</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/api/hilih?kata=hadeh&apikey=APIKEY">Hilih</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/spamcall?nomor=89690719275&apikey=APIKEY">Spam Call</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/spamsms?nomor=089690719275&jumlah=5&apikey=APIKEY">Spam Sms</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/dadu?apikey=APIKEY">Dadu</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/math?apikey=APIKEY&mode=hard">Math</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/math2?apikey=APIKEY">Math 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/api/kuis/caklontong?apikey=APIKEY">Cak Lontong</a></li>
-          	        <li class="nav-item"> <a class="nav-link" href="/api/kuis/family100?apikey=APIKEY">Family100</a></li>
-          <li class="nav-item"> <a class="nav-link" href="/api/kuis/tebakgambar?apikey=APIKEY">Tebak Gambar</a></li>           
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-anime" aria-expanded="false" aria-controls="ui-anime">
-          <span class="menu-icon">
-          <i class="nac-icon fas fa-cat"></i>
-          </span>
-          <span class="menu-title">Anime & Manga API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-anime">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="api/anime/random?apikey=APIKEY">Random Anime</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/manga/random?apikey=APIKEY">Random Manga</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/anime/kusonime?search=planetarian&apikey=YOUR_APIKEY">Kusonime</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/manga?search=kimetsu no yaiba&apikey=YOUR_APIKEY">Manga</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-random" aria-expanded="false" aria-controls="ui-random">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-newspaper"></i>
-          </span>
-          <span class="menu-title">News API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-random">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="api/news?apikey=APIKEY">Jenis Berita</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/news/cnn?type=Berita&apikey=YOUR_APIKEY">Cnn News</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/news/cnbc?type=Berita&apikey=YOUR_APIKEY">CnBc News</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/news/republika?type=Berita&apikey=YOUR_APIKEY">Republika News</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/news/tempo?type=Berita&apikey=YOUR_APIKEY">Tempo News</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/news/antara?type=Berita&apikey=YOUR_APIKEY">Antara News</a
-          <li class="nav-item"> <a class="nav-link" href="api/news/kumparan?type=Berita&apikey=YOUR_APIKEY">Kumparan News</a></li>
-          </ul>
-          </div>
-          </li>
-          <li class="nav-item menu-items">
-          <a class="nav-link" data-toggle="collapse" href="#ui-tools" aria-expanded="false" aria-controls="ui-tools">
-          <span class="menu-icon">
-          <i class="nav-icon fas fa-wrench"></i>
-          </span>
-          <span class="menu-title">Tools API</span>
-          <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="ui-tools">
-          <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="api/ssweb?apikey=YOUR_APIKEY&url=https://www.youtube.com/c/ojan OFC">SS Web</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/repeat?text=halo%20&jumlah=1000&apikey=YOUR_APIKEY">Text Repeater</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/nulis?text=ojan&apikey=YOUR_APIKEY">Nulis Buku</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/nulis2?text=ojan&apikey=YOUR_APIKEY">Nulis Buku 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/short/tiny?url=ojan-api-2021.herokuapp.com&apikey=YOUR_APIKEY">Short Link</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/kodepos?kota=jakarta&apikey=YOUR_APIKEY">Kode Pos</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/translate?kata=hi&apikey=YOUR_APIKEY">Translate</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/calculator?angka=11%20*%2045&apikey=YOUR_APIKEY">Calculator</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/towebp?apikey=YOUR_APIKEY&url=https://sdl-stickershop.line.naver.jp/products/0/0/1/3234393/android/animation/35532558.png">PNG To Webp</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/ssweb?apikey=YOUR_APIKEY&url=https://www.youtube.com/c/fauzanperfect">SS Web</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/repeat?text=halo%20&jumlah=1000&apikey=YOUR_APIKEY">Text Repeater</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/nulis?text=ojan&apikey=YOUR_APIKEY">Nulis Buku</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/nulis2?text=ojan&apikey=YOUR_APIKEY">Nulis Buku 2</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/short/tiny?url=Ojan.com&apikey=YOUR_APIKEY">Short Link</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/kodepos?kota=jakarta&apikey=YOUR_APIKEY">Kode Pos</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/translate?kata=hi&apikey=YOUR_APIKEY">Translate</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/calculator?angka=11%20*%2045&apikey=YOUR_APIKEY">Calculator</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/towebp?apikey=YOUR_APIKEY&url=https://sdl-stickershop.line.naver.jp/products/0/0/1/3234393/android/animation/35532558.png">PNG To Webp</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/tomp4?url=bynens.be/demo/animated-webp-supported.webp&apikey=YOUR_APIKEY">Webp To MP4</a></li>
-          <li class="nav-item"> <a class="nav-link" href="api/imgbb?url=spot.com/-TNGZGhSt_zI/X93Q4iKhQxI/AAAAAAAAVF4/L4rB8enc1HoFy5aXkvomfmxcR30kygKrACNcBGAsYHQ/s578/91913235_2830089170435663_4447843912417017856_n.jpg&apikey=YOUR_APIKEY">Imgbb Uploader</a></li
-          </ul>
-          </div>
-          </li>
-          <span class="nav-link">Contact Me</span>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://github.com/Rinka433">
-              <span class="menu-icon">
-                <i class="nav-icon fas fa-laptop-code"></i>
-              </span>
-              <span class="menu-title">Github</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://wa.me/6288221611480">
-              <span class="menu-icon">
-                <i class="nav-icon fas fa-comments"></i>
-              </span>
-              <span class="menu-title">WhatsApp</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="https://instagram.com/lolichan364">
-              <span class="menu-icon">
-                <i class="nav-icon fas fa-camera-retro"></i>
-              </span>
-              <span class="menu-title">Instagram</span>
-            </a>
-          </li>      
-        </ul>
       </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>T.Rinka</h3>
-                
-                <p>Dev Web</p>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-category">Main</li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="icon-bg"><i class="mdi mdi-crosshairs-gps menu-icon"></i></span>
+                <span class="menu-title">UI Elements</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                </ul>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
+                <span class="menu-title">Icons</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
+                <span class="menu-title">Forms</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/charts/chartjs.html">
+                <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
+                <span class="menu-title">Charts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/tables/basic-table.html">
+                <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
+                <span class="menu-title">Tables</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="icon-bg"><i class="mdi mdi-lock menu-icon"></i></span>
+                <span class="menu-title">User Pages</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                </ul>
               </div>
-              <a href="#" class="small-box-footer">Own Rest Ap</a>
+            </li>
+            <li class="nav-item documentation-link">
+              <a class="nav-link" href="http://www.bootstrapdash.com/demo/connect-plus-free/jquery/documentation/documentation.html" target="_blank">
+                <span class="icon-bg">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                </span>
+                <span class="menu-title">Documentation</span>
+              </a>
+            </li>
+            <li class="nav-item sidebar-user-actions">
+              <div class="user-details">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="d-flex align-items-center">
+                      <div class="sidebar-profile-img">
+                        <img src="assets/images/faces/face28.png" alt="image">
+                      </div>
+                      <div class="sidebar-profile-text">
+                        <p class="mb-1">Henry Klein</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="badge badge-danger">3</div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item sidebar-user-actions">
+              <div class="sidebar-user-menu">
+                <a href="#" class="nav-link"><i class="mdi mdi-settings menu-icon"></i>
+                  <span class="menu-title">Settings</span>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item sidebar-user-actions">
+              <div class="sidebar-user-menu">
+                <a href="#" class="nav-link"><i class="mdi mdi-speedometer menu-icon"></i>
+                  <span class="menu-title">Take Tour</span></a>
+              </div>
+            </li>
+            <li class="nav-item sidebar-user-actions">
+              <div class="sidebar-user-menu">
+                <a href="#" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
+                  <span class="menu-title">Log Out</span></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row" id="proBanner">
+              <div class="col-12">
+                <span class="d-flex align-items-center purchase-popup">
+                  <p>Like what you see? Check out our premium version for more.</p>
+                  <a href="https://github.com/BootstrapDash/ConnectPlusAdmin-Free-Bootstrap-Admin-Template" target="_blank" class="btn ml-auto download-button">Download Free Version</a>
+                  <a href="http://www.bootstrapdash.com/demo/connect-plus/jquery/template/" target="_blank" class="btn purchase-button">Upgrade To Pro</a>
+                  <i class="mdi mdi-close" id="bannerClose"></i>
+                </span>
+              </div>
             </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>110<sup style="font-size: 20px"></sup></h3>
-
-                <p>Total Features</p>
+            <div class="d-xl-flex justify-content-between align-items-start">
+              <h2 class="text-dark font-weight-bold mb-2"> Overview dashboard </h2>
+              <div class="d-sm-flex justify-content-xl-between align-items-center mb-2">
+                <div class="btn-group bg-white p-3" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-link text-light py-0 border-right">7 Days</button>
+                  <button type="button" class="btn btn-link text-dark py-0 border-right">1 Month</button>
+                  <button type="button" class="btn btn-link text-light py-0">3 Month</button>
+                </div>
+                <div class="dropdown ml-0 ml-md-4 mt-2 mt-lg-0">
+                  <button class="btn bg-white dropdown-toggle p-3 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-calendar mr-1"></i>24 Mar 2019 - 24 Mar 2019 </button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+                    <h6 class="dropdown-header">Settings</h6>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </div>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">Features</a>
             </div>
-          </div>
-        
-<div class="content">
-<div class="row">
-<div class="col-xl-3 col-lg-6 col-md-6 col-xm-12">
-<div class="card overflow-hidden dash1-card border-0">
-<div class="card-body">
-<div class="d-flex align-items-end justify-content-between">
-<div>
-<p class=" mb-1 ">Total Request</p>
-<h2 class="mb-1 number-font"><div id="userhit"></div></h2>
-<small class="fs-12 text-muted">Total Semua Request</small>
-</div>
-<span class="text-secondary fs-35 dash1-iocns bg-secondary-transparent border-secondary"><i class="fas fa-eye" aria-hidden="true"></i></span>
-</div>
-</div>
-</div>
-</div>
-
-<div class="col-xl-3 col-lg-6 col-md-12 col-xm-12">
-<div class="card overflow-hidden dash1-card border-0">
-<div class="card-body">
-<div class="d-flex align-items-end justify-content-between">
-<div>
-<p class=" mb-1 ">IP Kamu</p>
-<h2 class="mb-1 number-font">
-<div id="ipanda"></div>
-</h2>
-<small class="fs-12 text-muted">Alamat Ip Kamu</small>
-</div>
-<span class="text-info fs-35 dash1-iocns bg-info-transparent border-info"><i class="fas fa-wifi" aria-hidden="true"></i></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="bedes">
-  <style>.columns{float:left;width:24.9%;padding:6px;border-radius:4px}.price{list-style-type:none;border:1px solid #eee;margin:0;padding:0;-webkit-transition:.3s;transition:.3s}.price:hover{box-shadow:0 8px 12px 0 rgba(0,0,0,.2)}.price .header{background-color:#111;color:#fff;font-size:10px;border-radius:4px}.price li{border-bottom:1px solid #eee;padding:10px;text-align:center}.price .grey{background-color:#eee;font-size:10px}@media only screen and (max-width:600px){.columns{width:100%}}.bedes{box-shadow:0 8px 12px 0 rgba(0,0,0,.2);position:relative;display:flex;flex-direction:column;min-width:0;word-wrap:break-word;border:2px solid rgba(0,0,0,.05);border-radius:.375rem;background-color:#fff;background-clip:border-box}.woysu{display:inline}@keyframes autopopup{from{opacity:0;margin-top:-200px}to{opacity:1}}#close{background-color:rgba(64,68,65,.5);position:fixed;top:0;left:0;right:0;bottom:0;animation:autopopup 1s}#close:target{-webkit-transition:all 1s;-moz-transition:all 1s;transition:all 1s;opacity:0;visibility:hidden}@media (min-width:768px){.container-popup{width:40%}}@media (max-width:767px){.container-popup{width:60%}}.container-popup{position:relative;margin:5% auto;padding:4px 3px;background-color:#f7f7f7;color:#333;border-radius:4px}.container-popup img{width:100%}</style>
-  <style>
-    .zoom{
-      transition: transform .2s;
-      width: 100%;
-    }
-    .zoom:hover{
-      transform: scale(1.5)
-    }
-  </style>
-  <div class="woysu">
-              
-    <div class="d-flex justify-content-between">
-      <marquee  bgcolor="#000000" style="margin-right: 4px; margin-left: 8px; margin-top: 12px;margin-bottom: 12px; border-radius: 4px;letter-spacing: 1px; font-family:arial; font-size:15px; color:#ffffff; padding-top: 4px;padding-bottom: 4px;">Rest Api Ini Masih Dalam Pengembangan,Jika Anda Menemukan Bug Harap Melapor... Rest Api Ini Masih Dalam Pengembangan,Jika Anda Menemukan Bug Harap Melapor... Rest Api Ini Masih Dalam Pengembangan,Jika Anda Menemukan Bug Harap Melapor...  </marquee>
-    </div>
-      <div id="Pricing">
-    <div class="columns">
-      
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        </a>
-      </div>
-      </div>
-      <div class="columns">
-         <ul class="price">
-            <li class="header" style="background-color:#00FF00"><span style="color: white;" class="h2 font-weight-bold mb-0">1 year</span></li>
-            <li class="grey">10k IDR / Userbaru</li>
-            <li>Free / Perpanjang</li>
-            <li class="grey">
-               <a class="btn btn-sm btn-default" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i style="color:#25bcff" class="fa fa-cart-plus" aria-hidden="true"></i> Checkout
-               </a>
-               <div class="dropdown-menu dropdown-menu-sm dropdown-menu-dark ">
-                  <h5 style="color:#000000;text-align: center;"><span>Bayar lewat wa aja kak</span></h5>
-               </div>
-             </a>
-           </li>
-   
-	<div class="card card-round mt-5">
-<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-<h4 class="m-0 font-weight-bold text-primary">CEK APIKEY</h4>
-</div>
-          <div class="card-body">
-<p class="status" style="font-size: 17px;"></p>
-<form class="forms-sample" id="cekkeyform">
-  <div class="form-group">
-            <input class="form-control" id="ampikey" type="text" placeholder="Masukkan Apikey" required>
-</div>
-  <div class="form-group">
-      <button type="submit" id="sbm" class="btn btn-primary">Submit</button>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border {">
+                  <ul class="nav nav-tabs tab-transparent" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link" id="home-tab" data-toggle="tab" href="#" role="tab" aria-selected="true">Users</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business-1" role="tab" aria-selected="false">Business</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="performance-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="conversion-tab" data-toggle="tab" href="#" role="tab" aria-selected="false">Conversion</a>
+                    </li>
+                  </ul>
+                  <div class="d-md-block d-none">
+                    <a href="#" class="text-light p-1"><i class="mdi mdi-view-dashboard"></i></a>
+                    <a href="#" class="text-light p-1"><i class="mdi mdi-dots-vertical"></i></a>
+                  </div>
+                </div>
+                <div class="tab-content tab-transparent-content">
+                  <div class="tab-pane fade show active" id="business-1" role="tabpanel" aria-labelledby="business-tab">
+                    <div class="row">
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Orders</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">932.00</h2>
+                            <div class="dashboard-progress dashboard-progress-1 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-lightbulb icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Completed</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">5443</h3>
                           </div>
                         </div>
-                      <div class="col-xl-6">
-            <div class="text-center text-xl-right text-muted">
-              Powered by ©<a href="https://wa.me/6288221611480" 
-                 class="font-weight-bold ml-1" target="_blank">Rinka </a>2020 - 2021
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Unique Visitors</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">756,00</h2>
+                            <div class="dashboard-progress dashboard-progress-2 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-account-circle icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Increased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">50%</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Impressions</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">100,38</h2>
+                            <div class="dashboard-progress dashboard-progress-3 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-eye icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Increased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">35%</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Followers</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold">4250k</h2>
+                            <div class="dashboard-progress dashboard-progress-4 d-flex align-items-center justify-content-center item-parent"><i class="mdi mdi-cube icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0">Decreased since yesterday</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark">25%</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 grid-margin">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                  <h4 class="card-title mb-0">Recent Activity</h4>
+                                  <div class="dropdown dropdown-arrow-none">
+                                    <button class="btn p-0 text-dark dropdown-toggle" type="button" id="dropdownMenuIconButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <i class="mdi mdi-dots-vertical"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuIconButton1">
+                                      <h6 class="dropdown-header">Settings</h6>
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-3 col-sm-4 grid-margin  grid-margin-lg-0">
+                                <div class="wrapper pb-5 border-bottom">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-dark">Total Profit</p>
+                                    <span class="text-success"><i class="mdi mdi-arrow-up"></i>2.95%</span>
+                                  </div>
+                                  <h3 class="mb-0 text-dark font-weight-bold">$ 92556</h3>
+                                  <canvas id="total-profit"></canvas>
+                                </div>
+                                <div class="wrapper pt-5">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-dark">Expenses</p>
+                                    <span class="text-success"><i class="mdi mdi-arrow-up"></i>52.95%</span>
+                                  </div>
+                                  <h3 class="mb-4 text-dark font-weight-bold">$ 59565</h3>
+                                  <canvas id="total-expences"></canvas>
+                                </div>
+                              </div>
+                              <div class="col-lg-9 col-sm-8 grid-margin  grid-margin-lg-0">
+                                <div class="pl-0 pl-lg-4 ">
+                                  <div class="d-xl-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-lg-flex align-items-center mb-lg-2 mb-xl-0">
+                                      <h3 class="text-dark font-weight-bold mr-2 mb-0">Devices sales</h3>
+                                      <h5 class="mb-0">( growth 62% )</h5>
+                                    </div>
+                                    <div class="d-lg-flex">
+                                      <p class="mr-2 mb-0">Timezone:</p>
+                                      <p class="text-dark font-weight-bold mb-0">GMT-0400 Eastern Delight Time</p>
+                                    </div>
+                                  </div>
+                                  <div class="graph-custom-legend clearfix" id="device-sales-legend"></div>
+                                  <canvas id="device-sales"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 grid-margin stretch-card">
+                        <div class="card card-danger-gradient">
+                          <div class="card-body mb-4">
+                            <h4 class="card-title text-white">Account Retention</h4>
+                            <canvas id="account-retension"></canvas>
+                          </div>
+                          <div class="card-body bg-white pt-4">
+                            <div class="row pt-4">
+                              <div class="col-sm-6">
+                                <div class="text-center border-right border-md-0">
+                                  <h4>Conversion</h4>
+                                  <h1 class="text-dark font-weight-bold mb-md-3">$306</h1>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="text-center">
+                                  <h4>Cancellation</h4>
+                                  <h1 class="text-dark font-weight-bold">$1,520</h1>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-8  grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-xl-flex justify-content-between mb-2">
+                              <h4 class="card-title">Page views analytics</h4>
+                              <div class="graph-custom-legend primary-dot" id="pageViewAnalyticLengend"></div>
+                            </div>
+                            <canvas id="page-view-analytic"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          <footer class="footer">
+            <div class="footer-inner-wraper">
+              <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard templates</a> from Bootstrapdash.com</span>
+              </div>
+            </div>
+          </footer>
+          <!-- partial -->
         </div>
-      </footer>
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<script src="dist/js/dashboard.js"></script>
-<script src="dist/js/ip.js"></script>
-<script src="dist/js/main.js"></script>
-<script src="dist/js/ampikey.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<div class="content">
-</body>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/js/circle-progress.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+  </body>
 </html>
