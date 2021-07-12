@@ -52,6 +52,10 @@
       sidebar.find('.collapse.show').collapse('hide');
     });
 
+    $(".aside-toggler").on("click", function () {
+      $(".mail-sidebar,.chat-list-wrapper").toggleClass("menu-open");
+    });
+
 
     //Change sidebar and content-wrapper height
     applyStyles();
